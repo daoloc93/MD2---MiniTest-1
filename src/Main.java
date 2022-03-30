@@ -9,11 +9,11 @@ public class Main {
             bookList[i] = new Book();
         }
 
-        bookList[0] = new ProgrammingBook("BookCode1", "Java", 200000, "author1", "English", "Java");
-        bookList[1] = new ProgrammingBook("BookCode2", "ProgramBook2", 300000, "author2", "Vietnamese", "Angular");
-        bookList[2] = new ProgrammingBook("BookCode3", "ProgramBook3", 500000, "author3", "Spain", "Django");
-        bookList[3] = new ProgrammingBook("BookCode4", "ProgramBook4", 600000, "author1", "English", "React");
-        bookList[4] = new ProgrammingBook("BookCode5", "ProgramBook5", 800000, "author1", "English", "Spring");
+        bookList[0] = new ProgrammingBook("BookCode1", "Java", 200000, "author1", "Java", "Angular");
+        bookList[1] = new ProgrammingBook("BookCode2", "ProgramBook2", 300000, "author2", "PHP", "Laravel");
+        bookList[2] = new ProgrammingBook("BookCode3", "ProgramBook3", 500000, "author3", "Python", "Django");
+        bookList[3] = new ProgrammingBook("BookCode4", "ProgramBook4", 600000, "author1", "Javascript", "React");
+        bookList[4] = new ProgrammingBook("BookCode5", "ProgramBook5", 800000, "author1", "Java", "Spring");
 
         bookList[5] = new FictionBook("BookCode6", "FictionBook1", 400000, "Author6", "Comedy");
         bookList[6] = new FictionBook("BookCode7", "FictionBook2", 700000, "Author7", "Anime");
@@ -23,8 +23,10 @@ public class Main {
 
         for (int i = 0; i < bookList.length; i++) {
             totalPrice += bookList[i].getPrice();
-            if (bookList[i].getName().equalsIgnoreCase("Java")) {
-                countJavaBook ++;
+            if (bookList[i] instanceof ProgrammingBook) {
+                if (((ProgrammingBook) bookList[i]).getLanguage().equalsIgnoreCase("Java")) {
+                    countJavaBook++;
+                }
             }
         }
 
