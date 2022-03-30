@@ -5,9 +5,6 @@ public class Main {
         int countJavaBook = 0;
 
         Book bookList[] = new Book[10];
-        for (int i = 0; i < 10; i++) {
-            bookList[i] = new Book();
-        }
 
         bookList[0] = new ProgrammingBook("BookCode1", "Java", 200000, "author1", "Java", "Angular");
         bookList[1] = new ProgrammingBook("BookCode2", "ProgramBook2", 300000, "author2", "PHP", "Laravel");
